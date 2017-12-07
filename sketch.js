@@ -18,24 +18,23 @@ let size2 = 60; // long part of rectangle
 let rNum1; // random number
 let rNum2; // random number
 let rNum3; // random number
-
 //*Area for varibles
+
 //Setting up resoloution + static code
 function setup() {
   createCanvas(594, 841) //resoloution of canvas
   rNum1 = random(1, 50); // random number between 1 and 50
   rNum2 = random(51, 100); // random number between 51 and 100
   rNum3 = random(101, 150); // random number between 101 and 150
-  hoz = random(width);
-  vert = random(height);
+  hoz = random(width); // random horizontal
+  vert = random(height); // vertical horizontal
   speedX = random(-1., 5.); //random velocity
   speedY = random(-1., 5.); //random velocity
 
-  //noLoop();
 
 //* defining X and Y
-  for (let y = 0; y < 34; y++) {
-    for (let x = 0; x < 24; x++) {
+  for (let y = 0; y < 34; y++) { // 34 rectangles on the y axis
+    for (let x = 0; x < 24; x++) { // 24 rectangles on the x axis
       //* defining X and Y
 
       if(y % 2){ // if the square is even in the grid
@@ -57,7 +56,7 @@ function setup() {
 
     }
   }
-}
+}// end of function
 // code that updates
 function draw() {
 
@@ -94,13 +93,13 @@ function draw() {
   }
 
 
-}
+}// end of function
 
 //*creates a function that spawns a cross
 function cross() { //function name
 
-  hoz += speedX;
-  vert += speedY;
+  hoz += speedX; //horizontal speed + velocity
+  vert += speedY; //vertical speed + velocity
 
 
  if (hoz>width-75  || hoz<75  ){ // if the shape touches on of these sides
@@ -147,11 +146,11 @@ rect(-30, -10, size2, size1); // rectangle that is wide
 pop();  // end area with things in you that you do not want to effect otherthings
 
 
-}
+}// end of function
 function ring() { //function name
 
-    hoz += speedX;
-    vert += speedY;
+    hoz += speedX; //horizontal speed + velocity
+    vert += speedY; //vertical speed + velocity
 
 
    if (hoz>width-75  || hoz<75  ){ // if the shape touches on of these sides
@@ -194,14 +193,12 @@ function ring() { //function name
     pop(); // end area with things in you that you do not want to effect otherthings
 
 
-    }
-
+    }// end of function
 
     function square() { //function name
 
-        hoz += speedX;
-        vert += speedY;
-
+        hoz += speedX; //horizontal speed + velocity
+        vert += speedY; //vertical speed + velocity
 
        if (hoz>width-75  || hoz<75  ){ // if the shape touches on of these sides
          speedX = speedX *-1; // reverse its velocity
@@ -242,7 +239,7 @@ function ring() { //function name
       vert = vert + 5; // make shape go down
       }
 
-        noStroke()
+        noStroke() // no lines
         fill(r, g, b); // ring colour
         push(); // start area with things in you that you do not want to effect otherthings
         translate(hoz, vert); /* start area with things in you that you do not want
@@ -254,5 +251,4 @@ function ring() { //function name
         pop(); /* end area with things in you that you do not want
         to effect otherthings */
 
-
-        }
+      } // end of function
