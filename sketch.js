@@ -57,8 +57,8 @@ function setup() {
     }
   }
 }// end of function
-// code that updates
-function draw() {
+
+function draw() { // code that updates
 
 
   if (mouseIsPressed) { //while mouse button 1 is being held down
@@ -242,8 +242,7 @@ function ring() { //function name
         noStroke() // no lines
         fill(r, g, b); // ring colour
         push(); // start area with things in you that you do not want to effect otherthings
-        translate(hoz, vert); /* start area with things in you that you do not want
-        to effect otherthings */
+        translate(hoz, vert); // move horizontaly and vertically
         rect(-30, -30, 15, 45); // 1 of 4 sides of the shape
         rect(15, -30, 15, 45); // 1 of 4 sides of the shape
         rect(-30, -30, 45, 15); // 1 of 4 sides of the shape
